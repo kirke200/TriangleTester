@@ -1,0 +1,227 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Triangle API",
+        "description": "API to test triangles to see what kind of triangle they are.",
+        "version": "1.0.0"
+    },
+    "host": "localhost:5001",
+    "port": "5001",
+    "basePath": "/",
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/triangleFrom3Sides": {
+            "post": {
+                "summary": "Takes 3 sides of a triangle in and returns whether the triangle is scalene, equilateral and isosceles.",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "in": "body",
+                    "name": "triangle",
+                    "schema": {
+                        "type": "object",
+                        "required": [
+                            "sideA",
+                            "sideB",
+                            "sideC"
+                        ],
+                        "properties": {
+                            "sideA": {
+                                "type": "integer"
+                            },
+                            "sideB": {
+                                "type": "integer"
+                            },
+                            "sideC": {
+                                "type": "integer"
+                            }
+                        }
+                    }
+                }],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "300": {
+                        "description": "Invalid input"
+                    }
+                }
+        
+            }
+        },
+        "/triangleFromThreeAngles": {
+            "post": {
+                "summary": "Takes 3 angles of a triangle in and returns whether the triangle is scalene, equilateral and isosceles.",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "in": "body",
+                    "name": "triangle",
+                    "schema": {
+                        "type": "object",
+                        "required": [
+                            "angleA",
+                            "angleB",
+                            "angleC"
+                        ],
+                        "properties": {
+                            "angleA": {
+                                "type": "number"
+                            },
+                            "angleB": {
+                                "type": "number"
+                            },
+                            "angleC": {
+                                "type": "number"
+                            }
+                        }
+                    }
+                }],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "300": {
+                        "description": "Invalid input"
+                    }
+                }
+        
+            }
+        },
+        "/triangleFromTwoAngles": {
+            "post": {
+                "summary": "Takes 2 angles of a triangle in and returns whether the triangle is scalene, equilateral and isosceles.",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "in": "body",
+                    "name": "triangle",
+                    "schema": {
+                        "type": "object",
+                        "required": [
+                            "angleA",
+                            "angleB"
+                        ],
+                        "properties": {
+                            "angleA": {
+                                "type": "number"
+                            },
+                            "angleB": {
+                                "type": "number"
+                            }
+                        }
+                    }
+                }],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "300": {
+                        "description": "Invalid input"
+                    }
+                }
+        
+            }
+        },
+        "/triangleFromTwoSidesAndOneOpposedAngle": {
+            "post": {
+                "summary": "Takes 2 sides and one opposing angle of a triangle in and returns whether the triangle is scalene, equilateral and isosceles.",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "in": "body",
+                    "name": "triangle",
+                    "schema": {
+                        "type": "object",
+                        "required": [
+                            "sideA",
+                            "sideB",
+                            "angleA"
+                        ],
+                        "properties": {
+                            "sideA": {
+                                "type": "number"
+                            },
+                            "sideB": {
+                                "type": "number"
+                            },
+                            "angleA": {
+                                "type": "number"
+                            }
+                        }
+                    }
+                }],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "300": {
+                        "description": "Invalid input"
+                    }
+                }
+        
+            }
+        },
+        "/triangleFromTwoSidesAndOneDifferentAngle": {
+            "post": {
+                "summary": "Takes 2 sides and one different angle of a triangle in and returns whether the triangle is scalene, equilateral and isosceles.",
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "in": "body",
+                    "name": "triangle",
+                    "schema": {
+                        "type": "object",
+                        "required": [
+                            "sideA",
+                            "sideB",
+                            "angleC"
+                        ],
+                        "properties": {
+                            "sideA": {
+                                "type": "integer"
+                            },
+                            "sideB": {
+                                "type": "integer"
+                            },
+                            "angleC": {
+                                "type": "integer"
+                            }
+                        }
+                    }
+                }],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "300": {
+                        "description": "Invalid input"
+                    }
+                }
+        
+            }
+        }
+    }
+}

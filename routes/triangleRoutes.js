@@ -10,7 +10,7 @@ function isValidSideOrAngle(side) {
 router.post("/triangleFrom3Sides", (req, res) => {
     var body = req.body;
 
-    if (!isValidSideOrAngle(body.sideA) || !isValidSideOrAngle(body.ideB) || !isValidSideOrAngle(body.sideC)) {
+    if (!isValidSideOrAngle(body.sideA) || !isValidSideOrAngle(body.sideB) || !isValidSideOrAngle(body.sideC)) {
         res.status(300).json({
             message: "Your input is not valid. You need to input 3 sides sideA, sideB and sideC"
         });
